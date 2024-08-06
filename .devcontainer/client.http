@@ -1,5 +1,11 @@
 
 @room_id = {{create_room.response.body.id}}
+@message_id = ""
+
+# @name get_rooms
+GET http://localhost:8080/api/rooms
+
+###
 
 # @name create_room
 POST http://localhost:8080/api/rooms
@@ -25,3 +31,26 @@ Content-Type: application/json
 }
 
 ###
+
+# @name get_room_messages
+GET http://localhost:8080/api/rooms/{{room_id}}/messages
+
+###
+
+# @name get_message
+GET http://localhost:8080/api/rooms/{{room_id}}/messages/{{message_id}}
+
+###
+
+# @name react_to_message
+PATCH http://localhost:8080/api/rooms/{{room_id}}/messages/{{message_id}}/react
+
+###
+
+# @name remove_reaction_from_message
+DELETE  http://localhost:8080/api/rooms/{{room_id}}/messages/{{message_id}}/react
+
+###
+
+# @name answer_message
+PATCH http://localhost:8080/api/rooms/{{room_id}}/messages/{{message_id}}/answer
