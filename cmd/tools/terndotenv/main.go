@@ -26,6 +26,7 @@ func main() {
 	// 	panic(err)
 	// }
 
+	// TODO: Colocar isso numa função??
 	// Buffers para capturar a saída padrão e a saída de erro
 	var out bytes.Buffer
 	var stderr bytes.Buffer
