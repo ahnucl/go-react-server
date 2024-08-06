@@ -1,0 +1,15 @@
+
+@room_id = {{create_room.response.body.id}}
+
+# @name create_room
+POST http://localhost:8080/api/rooms
+content-type: application/json
+
+{
+    "theme": "teste 1"
+}
+
+###
+
+# @name subscribe_to_room
+GET http://localhost:8080/subscribe/{{room_id}}
