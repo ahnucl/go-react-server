@@ -1,6 +1,6 @@
 
-@room_id = {{create_room.response.body.id}}
-@message_id = ""
+@room_id = {{get_rooms.response.body.rooms[0].id}}
+@message_id = "10459b5b-ac6e-4fb1-9b1f-17ff06b15252"
 
 # @name get_rooms
 GET http://localhost:8080/api/rooms
